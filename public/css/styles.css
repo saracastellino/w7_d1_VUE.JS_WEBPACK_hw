@@ -1,4 +1,4 @@
-#app {
+body {
   width: 60%;
   margin: 0 auto;
   font-family: 'Lato', sans-serif;
@@ -29,13 +29,13 @@ li button {
   cursor: pointer;
 }
 
-li.purchased {
-  border: 2px solid #1a681e;
-  color: #1a681e;
+li.luigi-does-not {
+  border: 2px solid #f2360c;
 }
 
-li.not-purchased {
-  border: 2px solid #f2360c;
+li.luigi-does {
+  border: 2px solid #1a681e;
+  color: #1a681e;
 }
 
 input[type="text"] {
@@ -43,7 +43,7 @@ input[type="text"] {
   width: 50%;
 }
 
-button{
+button, #new-step-button{
   padding: 10px;
   background: #000;
   color: #fff;

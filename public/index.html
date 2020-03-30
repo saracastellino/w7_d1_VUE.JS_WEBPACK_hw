@@ -12,17 +12,17 @@
 <body>
   <div id="app">
     <h1>Paint the Wall - step by step guide</h1>
-    <ul>
-      <li v-for="(step, index) in steps" :class="step.luigiDoesIt ? 'luigi-does':'luigi-does-not'" >
+    <ol>
+      <li v-for="(step, index) in steps" :class="step.mario ? 'luigi-does-not':'luigi-does'" >
         <span>{{ step.action }}</span>
-        <span v-if="step.luigiDoesIt"> Luigi's</span>
-        <button v-if="!step.luigiDoesIt" v-on:click="luigiDoesIt(index)">Mario's</button>
+        <span v-if="step.mario">Mario's</span>
+        <button v-if="!step.mario" v-on:click="luigiDoesIt(index)">Luigi's</button>
       </li>
-    </ul>
+    </ol>
     <form v-on:submit.prevent="saveNewStep">
       <label for="new-step">Add a new step:</label>
       <input id="new-step" type="text" v-model="newStep" />
-      <input type="submit" value ="Save New Step" />
+      <input id="new-step-button" type="submit" value ="Save New Step" />
     </form>
   </div>
 </body>
